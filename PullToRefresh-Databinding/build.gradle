@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+apply from: "${GRADLES.libConfig}"
+
+dependencies {
+    api rootProject.ext.SUPPORTDEPS.recyclerView
+    api rootProject.ext.OTHERDEPS.bindingcollectionadapter
+    api rootProject.ext.OTHERDEPS.bindingcollectionadapte_recyclerview
+}
+//添加
+//publish {
+//    userOrg = 'dxp2020'//bintray.com用户名
+//    groupId = 'com.shangtao'//jcenter上的路径
+//    artifactId = 'PullToRefresh-Databinding'//项目名称
+//    publishVersion = '1.0.0'//版本号
+//    desc = '下拉刷新上拉加载通用框架，支持databinding'//描述，不重要
+//    website = 'https://github.com/dxp2020/PullToRefresh-Databinding'//网站，最好有，不重要
+//}
+
+
+ext {
+    libraryPackaging = 'aar'                                                         //上传aar形式的打包文件
+
+    // jcenter
+    bintrayRepo = "maven"                                        // 你上传的位于bintray中的Repository名称，如果没有创建会有一个叫maven的
+    name = 'PullToRefresh-Databinding'                                               // 必须和library module的名字相同
+    libraryDesc = '下拉刷新上拉加载通用框架，支持databinding'
+    publishedGroupId = 'com.shangtao'                                                // 填写groupId， 一般是包名，比如：com.android.support
+    versionName = '1.0.0'                                                            // 版本号，比如：22.2.1
+    websiteUrl = 'https://github.com/dxp2020/PullToRefresh-Databinding'              // 可以填写github上的库地址.
+    issueTrackerUrl = 'https://github.com/dxp2020/PullToRefresh-Databinding/issues'  // 可以填写github库的issue地址.
+    vcsUrl = 'https://github.com/dxp2020/PullToRefresh-Databinding.git'              // 可以填写github上库的地址.
+    licenseName = "Apache-2.0"
+    libraryVersionDesc = '下拉刷新上拉加载通用框架，支持databinding'
+
+    // maven
+    artifact = 'PullToRefresh-Databinding'                                           // 必须和library module的名字相同
+    libraryName = 'PullToRefresh-Databinding'
+    developerId = 'dxp2020'
+    developerName = 'dxp2020'
+    developerEmail = 'dxp2020@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+
+}
+
+apply from: 'android-maven-install.gradle'
+apply from: 'android-tasks.gradle'
+apply from: 'bintray.gradle'
