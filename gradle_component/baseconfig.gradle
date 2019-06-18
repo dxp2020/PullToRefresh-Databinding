@@ -1,4 +1,3 @@
-apply plugin: 'org.greenrobot.greendao'
 // 各个组件所使用的基本配置。定义在此。便于对多版本进行统一修改更新
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -81,7 +80,6 @@ dependencies {
     api rootProject.ext.SUPPORTDEPS.recyclerView
 
     api rootProject.ext.OTHERDEPS.eventbus
-    api rootProject.ext.OTHERDEPS.greendao
     api rootProject.ext.OTHERDEPS.androidutils
     api rootProject.ext.OTHERDEPS.rxlifecycle
     api rootProject.ext.OTHERDEPS.rxlifecycle_components

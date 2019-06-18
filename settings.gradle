@@ -1,1 +1,1 @@
-include ':PullToRefresh-Databinding'
+include ':PullToRefresh-Databinding', ':app'

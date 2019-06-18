@@ -1,0 +1,7 @@
+apply plugin: 'com.android.application'
+apply from: "../gradle_component/baseconfig.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.shangtao:PullToRefresh-Databinding:1.0.0'
+}
